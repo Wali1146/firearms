@@ -1,0 +1,197 @@
+ERROR - 2026-02-25 10:41:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) ...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-02-24-062028_Products.php(60): CodeIgniter\Database\Forge->createTable('products')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\Products->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-02-25 10:43:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) ...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`type` enum(\'subscription\',\'course\',\'firearms\')(255) NOT NULL,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`team_id` INT(11) UNSIGNED NOT NULL,
+	`price` decimal(10,2) NOT NULL,
+	`description` text NULL DEFAULT NULL,
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_products` PRIMARY KEY(`id`),
+	CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `products_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-02-24-062028_Products.php(59): CodeIgniter\Database\Forge->createTable('products')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\Products->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-02-25 11:29:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(10,2) NULL DEFAULT 'completed',
+	`created_at` timestamp NOT NULL,
+	CONSTRAIN...' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `transactions` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`user_id` INT(11) UNSIGNED NOT NULL,
+	`order_id` INT(11) UNSIGNED NULL DEFAULT NULL,
+	`amount` decimal(10,2) NOT NULL,
+	`method` varchar(50) NULL DEFAULT \'credit_card\',
+	`status` enum(\'pending\',\'completed\',\'refunded\',\'failed\')(10,2) NULL DEFAULT \'completed\',
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_transactions` PRIMARY KEY(`id`),
+	CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `transactions_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `transactions` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`user_id` INT(11) UNSIGNED NOT NULL,
+	`order_id` INT(11) UNSIGNED NULL DEFAULT NULL,
+	`amount` decimal(10,2) NOT NULL,
+	`method` varchar(50) NULL DEFAULT \'credit_card\',
+	`status` enum(\'pending\',\'completed\',\'refunded\',\'failed\')(10,2) NULL DEFAULT \'completed\',
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_transactions` PRIMARY KEY(`id`),
+	CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `transactions_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `transactions` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`user_id` INT(11) UNSIGNED NOT NULL,
+	`order_id` INT(11) UNSIGNED NULL DEFAULT NULL,
+	`amount` decimal(10,2) NOT NULL,
+	`method` varchar(50) NULL DEFAULT \'credit_card\',
+	`status` enum(\'pending\',\'completed\',\'refunded\',\'failed\')(10,2) NULL DEFAULT \'completed\',
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_transactions` PRIMARY KEY(`id`),
+	CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `transactions_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `transactions` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`user_id` INT(11) UNSIGNED NOT NULL,
+	`order_id` INT(11) UNSIGNED NULL DEFAULT NULL,
+	`amount` decimal(10,2) NOT NULL,
+	`method` varchar(50) NULL DEFAULT \'credit_card\',
+	`status` enum(\'pending\',\'completed\',\'refunded\',\'failed\')(10,2) NULL DEFAULT \'completed\',
+	`created_at` timestamp NOT NULL,
+	CONSTRAINT `pk_transactions` PRIMARY KEY(`id`),
+	CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `transactions_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-02-25-042039_Transactions.php(58): CodeIgniter\Database\Forge->createTable('transactions')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\Transactions->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
