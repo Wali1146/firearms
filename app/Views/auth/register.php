@@ -8,6 +8,24 @@
                 <h3 class="card-title text-center">Create Your Account</h3>
             </div>
             <div class="card-body">
+                <div style="margin-bottom: 15px;">
+                    <small class="text-muted">Form Date: <?= date('Y-m-d H:i:s') ?></small>
+                </div>
+
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <?= session()->getFlashdata('success') ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?= session()->getFlashdata('error') ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                <?php endif; ?>
+                
                 <form action="/register" method="post">
                     <?= csrf_field() ?>
 

@@ -23,6 +23,8 @@
         <div class="card h-100">
             <div class="card-body">
                 <h5 class="card-title"><?= esc($product['name']) ?></h5>
+                <img src="<?= base_url('assets/img/products/' . (isset($product['image']) && !empty($product['image']) ? $product['image'] : 'placeholder.jpg')) ?>" 
+                    alt="<?= esc($product['name']) ?>" class="img-fluid mb-3">
                 <p class="card-text text-muted"><?= esc($product['type']) ?> - <?= esc($product['description']) ?></p>
                 <p class="card-text fw-bold text-primary">$<?= number_format($product['price'], 2) ?></p>
                 <a href="/products/<?= $product['id'] ?>" class="btn btn-primary">View Details</a>

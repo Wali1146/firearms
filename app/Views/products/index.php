@@ -55,6 +55,8 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title"><?= esc($product['name']) ?></h5>
+                    <img src="<?= base_url('assets/img/products/' . (isset($product['image']) && !empty($product['image']) ? $product['image'] : 'placeholder.jpg')) ?>" 
+                        alt="<?= esc($product['name']) ?>" class="img-fluid mb-3">
                     <p class="card-text">
                         <span class="badge bg-secondary"><?= esc($product['type']) ?></span>
                         <span class="badge bg-info"><?= esc($product['category_name']) ?></span>

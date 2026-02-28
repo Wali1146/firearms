@@ -8,10 +8,9 @@ class UserModel extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['username', 'email', 'password', 'role'];
-    protected $useTimestamps = true;
-    protected $createdField = 'created_at';
-    protected $updatedField = null;
+    protected $allowedFields = ['username', 'email', 'password', 'role', 'created_at'];
+    protected $useTimestamps = FALSE;
+    protected $skipValidation = FALSE;
 
     protected $validationRules = [
         'username' => 'required|min_length[3]|max_length[50]|is_unique[users.username,id,{id}]',

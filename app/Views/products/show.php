@@ -18,6 +18,8 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="card-title"><?= esc($product['name']) ?></h1>
+                <img src="<?= base_url('assets/img/products/' . (isset($product['image']) && !empty($product['image']) ? $product['image'] : 'placeholder.jpg')) ?>" 
+                    alt="<?= esc($product['name']) ?>" class="img-fluid mb-3">
                 <p class="card-text">
                     <span class="badge bg-secondary"><?= esc($product['type']) ?></span>
                     <span class="badge bg-info"><?= esc($product['category_name']) ?></span>
@@ -38,8 +40,7 @@
                         <?= csrf_field() ?>
                         <div class="mb-3">
                             <label for="quantity" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" id="quantity" name="quantity"
-                                   value="1" min="1" max="99">
+                            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" max="99">
                         </div>
                         <button type="submit" class="btn btn-primary w-100 mb-2">Add to Cart</button>
                     </form>

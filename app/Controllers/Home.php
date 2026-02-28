@@ -76,6 +76,6 @@ class Home extends BaseController
             'subscriptions' => $this->productModel->getByType('subscription')
         ];
 
-        return view('home/index', $data);
+        return view('home/services', $data);
     }
 }

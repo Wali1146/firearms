@@ -25,7 +25,9 @@ class Auth extends BaseController
             'title' => 'Login - Rhys Firearms'
         ];
 
-        if ($this->request->getMethod() === 'post') {
+        $method = strtolower($this->request->getMethod());
+
+        if ($method === 'post') {
             $rules = [
                 'username' => 'required',
                 'password' => 'required'
@@ -50,8 +52,8 @@ class Auth extends BaseController
                     session()->setFlashdata('error', 'Invalid username/email or password.');
                 }
             } else {
-                // $data['validation'] = $this->validator;
-                dd($this->validator->getErrors());
+                $data['validation'] = $this->validator;
+                // dd($this->validator->getErrors());
             }
         }
         return view('auth/login', $data);
@@ -67,7 +69,19 @@ class Auth extends BaseController
             'title' => 'Register - Rhys Firearms'
         ];
 
-        if ($this->request->getMethod() === 'post') {
+        $method = strtolower($this->request->getMethod());
+        log_message('debug', 'Register method: ' . $method);
+
+        if ($method === 'post') {
+            log_message('debug', 'POST data received');
+            
+            $username = $this->request->getPost('username');
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
+            $confirm_password = $this->request->getPost('confirm_password');
+            
+            log_message('debug', "Register attempt - username: $username, email: $email");
+
             $rules = [
                 'username' => 'required|min_length[3]|max_length[50]|is_unique[users.username]',
                 'email' => 'required|valid_email|is_unique[users.email]',
@@ -76,20 +90,29 @@ class Auth extends BaseController
             ];
 
             if ($this->validate($rules)) {
+                log_message('debug', 'Validation passed');
+                
                 $userData = [
-                    'username' => $this->request->getPost('username'),
-                    'email' => $this->request->getPost('email'),
-                    'password' => $this->userModel->hashPassword($this->request->getPost('password')),
-                    'role' => 'user'
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => $this->userModel->hashPassword($password),
+                    'role' => 'user',
+                    'created_at' => date('Y-m-d H:i:s')
                 ];
 
+                log_message('debug', 'Attempting insert with data: ' . json_encode($userData));
+
                 if ($this->userModel->insert($userData)) {
+                    log_message('debug', 'Insert successful, ID: ' . $this->userModel->getInsertID());
                     session()->setFlashdata('success', 'Registration successful! Please login.');
                     return redirect()->to('/login');
                 } else {
-                    session()->setFlashdata('error', 'Registration failed. Please try again.');
+                    $error = $this->userModel->errors();
+                    log_message('error', 'Registration failed: ' . json_encode($error));
+                    session()->setFlashdata('error', 'Registration failed: ' . json_encode($error));
                 }
             } else {
+                log_message('debug', 'Validation failed: ' . json_encode($this->validator->getErrors()));
                 $data['validation'] = $this->validator;
             }
         }
