@@ -185,4 +185,68 @@ class Admin extends BaseController
 
         return redirect()->to('/admin/products');
     }
+
+    public function setupImages()
+    {
+        if (!session()->get('user_id') || session()->get('user_role') !== 'admin') {
+            return redirect()->to('/');
+        }
+
+        $db = \Config\Database::connect();
+        $result = [];
+
+        try {
+            // Check if image column exists
+            $fields = $db->getFieldData('products');
+            $columnExists = false;
+            
+            foreach ($fields as $field) {
+                if ($field->name === 'image') {
+                    $columnExists = true;
+                    break;
+                }
+            }
+
+            if (!$columnExists) {
+                // Add image column
+                $db->query("ALTER TABLE products ADD COLUMN image VARCHAR(255) NULL DEFAULT NULL AFTER description");
+                $result['column_added'] = true;
+            } else {
+                $result['column_exists'] = true;
+            }
+
+            // Mapping of product names to image filenames
+            $imageMap = [
+                'R-15 Tactical Rifle' => 'r15-tactical-rifle.jpg',
+                'R-10 Compact Rifle' => 'r10-compact-rifle.jpg',
+                'R-700 Bolt Action' => 'r700-bolt-action.jpg',
+                'RS-12 Shotgun' => 'rs12-shotgun.jpg',
+                'RP-9 Pistol' => 'rp9-pistol.jpg',
+                'RP-45 Pistol' => 'rp45-pistol.jpg',
+                'Basic Firearms Training' => 'basic-firearms-training.jpg',
+                'Advanced Tactical Training' => 'advanced-tactical-training.jpg',
+                'Concealed Carry Certification' => 'concealed-carry-certification.jpg',
+                'Annual Range Membership' => 'annual-range-membership.jpg',
+                'Premium Gunsmith Service' => 'premium-gunsmith-service.jpg',
+            ];
+
+            // Update products with image filenames
+            $updated = 0;
+            foreach ($imageMap as $productName => $imageName) {
+                $db->query("UPDATE products SET image = ? WHERE name = ? AND (image IS NULL OR image = '')", 
+                         [$imageName, $productName]);
+                $updated += $db->affectedRows();
+            }
+
+            $result['success'] = true;
+            $result['products_updated'] = $updated;
+            session()->setFlashdata('success', "Image setup complete! Updated $updated products with image filenames.");
+
+        } catch (\Exception $e) {
+            $result['error'] = $e->getMessage();
+            session()->setFlashdata('error', 'Error during setup: ' . $e->getMessage());
+        }
+
+        return redirect()->to('/admin')->with('setup_result', $result);
+    }
 }

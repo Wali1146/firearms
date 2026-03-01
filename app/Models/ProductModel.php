@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = 'products';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'type', 'category_id', 'team_id', 'price', 'description'];
+    protected $allowedFields = ['name', 'type', 'category_id', 'team_id', 'price', 'description', 'image'];
     protected $useTimestamps = true;
     protected $createdField = 'created_at';
     protected $updatedField = null;
