@@ -350,7 +350,7 @@
                         <h4 class="text-bright mb-3">R-15 TACTICAL RIFLE</h4>
                         <div class="hero-product-img">
                             <!-- Local image for hero product -->
-                            <img src="img/products/r15-tactical-rifle.jpg" alt="R-15 Tactical Rifle" 
+                            <img src="<?= base_url('assets/img/products/r15-tactical-rifle.jpg') ?>" alt="R-15 Tactical Rifle" 
                                  onerror="this.onerror=null; this.parentElement.classList.add('no-image'); this.parentElement.innerHTML='R-15 Tactical Rifle Image';">
                         </div>
                         <p>Advanced tactical rifle with precision engineering for professional use.</p>
