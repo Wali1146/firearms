@@ -1,4 +1,4 @@
-<?php echo view('templates/header'); ?>
+<?php echo view('templates/main'); ?>
 <div class="container-fluid mt-5">
     <div class="row mb-4">
         <div class="col-md-8">
@@ -176,4 +176,4 @@ document.getElementById('productModal').addEventListener('hidden.bs.modal', func
 });
 </script>
 
-<?php echo view('templates/footer'); ?>
+<?php echo view('templates/main'); ?>

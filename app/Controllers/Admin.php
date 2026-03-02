@@ -123,7 +123,7 @@ class Admin extends BaseController
             }
         }
 
-        return view('admin/create_product', $data);
+        return view('admin/products', $data);
     }
 
     public function editProduct($id)

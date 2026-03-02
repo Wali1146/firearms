@@ -44,3 +44,7 @@ $routes->get('/orders/(:num)', 'Orders::show/$1');
 // Admin routes (only accessible to admin users)
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/users', 'Admin::users');
+$routes->get('/admin/products', 'Admin::products');
+$routes->get('/admin/orders', 'Admin::orders');
+$routes->get('/admin/products/create', 'Admin::createProduct');
+$routes->post('/admin/save-product', 'Admin::saveProduct');

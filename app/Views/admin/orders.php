@@ -1,4 +1,4 @@
-<?php echo view('templates/header'); ?>
+<?php echo view('templates/main'); ?>
 <div class="container-fluid mt-5">
     <div class="row mb-4">
         <div class="col-md-8">
@@ -287,7 +287,7 @@ function getStatusColor(status) {
 }
 </script>
 
-<?php echo view('templates/footer'); ?>
+<?php echo view('templates/main'); ?>
 
 <?php
 function getStatusColor($status) {
