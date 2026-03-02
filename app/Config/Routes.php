@@ -42,16 +42,5 @@ $routes->get('/orders', 'Orders::index');
 $routes->get('/orders/(:num)', 'Orders::show/$1');
 
 // Admin routes (only accessible to admin users)
-$routes->group('admin', ['filter' => 'admin'], function($routes) {
-    $routes->get('', 'Admin::index');
-    $routes->get('dashboard', 'Admin::dashboard');
-    $routes->get('setup-images', 'Admin::setupImages');
-    $routes->get('users', 'Admin::users');
-    $routes->get('orders', 'Admin::orders');
-    $routes->get('products', 'Admin::products');
-    $routes->get('products/create', 'Admin::createProduct');
-    $routes->post('products/store', 'Admin::storeProduct');
-    $routes->get('products/edit/(:num)', 'Admin::editProduct/$1');
-    $routes->post('products/update/(:num)', 'Admin::updateProduct/$1');
-    $routes->post('products/delete/(:num)', 'Admin::deleteProduct/$1');
-});
+$routes->get('/admin', 'Admin::index');
+$routes->get('/admin/users', 'Admin::users');
