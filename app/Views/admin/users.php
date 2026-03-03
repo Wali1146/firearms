@@ -88,7 +88,7 @@
                 <h5 class="modal-title" id="userModalLabel">Add New User</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <form action="<?= base_url('admin/save-user') ?>" method="POST" id="userForm">
+            <form action="<?= base_url('admin/user') ?>" method="POST" id="userForm">
                 <div class="modal-body">
                     <input type="hidden" name="id" id="userId" value="">
 
@@ -148,5 +148,3 @@ document.getElementById('userModal').addEventListener('hidden.bs.modal', functio
     document.getElementById('password').required = true;
 });
 </script>
-
-<?php echo view('templates/main'); ?>

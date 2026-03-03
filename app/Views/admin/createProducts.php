@@ -1,4 +1,4 @@
-<?php echo view('templates/header'); ?>
+<?php echo view('templates/main'); ?>
 
 <div class="container-fluid mt-5 mb-5">
     <div class="row">
@@ -32,6 +32,7 @@
 
                     <!-- Product Form -->
                     <form action="<?= base_url('admin/create-product') ?>" method="POST" enctype="multipart/form-data" id="productForm">
+                        <?= csrf_field() ?>
                         <!-- Basic Information Section -->
                         <div class="section-divider mb-4">
                             <h5 class="text-dark mb-3">
@@ -252,5 +253,3 @@
         }
     });
 </script>
-
-<?php echo view('templates/footer'); ?>

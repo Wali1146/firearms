@@ -68,7 +68,7 @@
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="/admin/products/create" class="btn btn-success w-100 mb-2">
+                        <a href="/admin/create-product" class="btn btn-success w-100 mb-2">
                             <i class="fas fa-plus"></i> Add Product
                         </a>
                     </div>

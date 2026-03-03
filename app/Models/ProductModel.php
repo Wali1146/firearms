@@ -8,18 +8,16 @@ class ProductModel extends Model
 {
     protected $table = 'products';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'type', 'category_id', 'team_id', 'price', 'description', 'image'];
-    protected $useTimestamps = true;
-    protected $createdField = 'created_at';
-    protected $updatedField = null;
+    protected $allowedFields = ['name', 'type', 'category_id', 'team_id', 'price', 'description', 'image', 'created_at'];
+    protected $useTimestamps = FALSE;
 
     protected $validationRules = [
         'name' => 'required|min_length[3]|max_length[255]',
-        'type' => 'required|in_list[subscription,course,firearms]',
+        'type' => 'required|in_list[firearms,course,subscription]',
         'category_id' => 'required|integer',
         'team_id' => 'required|integer',
         'price' => 'required|decimal',
-        'description' => 'permit_empty|max_length[1000]'
+        'description' => 'permit_empty|string'
     ];
 
     protected $validationMessages = [
@@ -30,22 +28,22 @@ class ProductModel extends Model
         ],
         'type' => [
             'required' => 'Product type is required',
-            'in_list' => 'Product type must be subscription, course, or firearms'
+            'in_list' => 'Product type must be either firearms, course, or subscription'
         ],
         'category_id' => [
             'required' => 'Category is required',
-            'integer' => 'Category ID must be a valid number'
+            'integer' => 'Category ID must be an integer'
         ],
         'team_id' => [
             'required' => 'Team is required',
-            'integer' => 'Team ID must be a valid number'
+            'integer' => 'Team ID must be an integer'
         ],
         'price' => [
             'required' => 'Price is required',
-            'decimal' => 'Price must be a valid decimal number'
+            'decimal' => 'Price must be a decimal number'
         ],
         'description' => [
-            'max_length' => 'Description cannot exceed 1000 characters'
+            'string' => 'Description must be a string'
         ]
     ];
 

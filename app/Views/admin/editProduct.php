@@ -33,6 +33,7 @@
                     <?php if (!empty($product)): ?>
                         <!-- Product Form -->
                         <form action="<?= base_url('admin/edit-product/' . $product['id']) ?>" method="POST" enctype="multipart/form-data" id="productForm">
+                            <?= csrf_field() ?>
                             <!-- Basic Information Section -->
                             <div class="section-divider mb-4">
                                 <h5 class="text-dark mb-3">
@@ -292,5 +293,3 @@
         }
     });
 </script>
-
-<?php echo view('templates/main'); ?>

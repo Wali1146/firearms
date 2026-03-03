@@ -287,8 +287,6 @@ function getStatusColor(status) {
 }
 </script>
 
-<?php echo view('templates/main'); ?>
-
 <?php
 function getStatusColor($status) {
     $colors = [
