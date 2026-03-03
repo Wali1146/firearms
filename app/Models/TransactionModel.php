@@ -100,7 +100,6 @@ class TransactionModel extends Model
     {
         return $this->where('user_id', $userId)
                     ->where('status', 'cart')
-                    ->set(['status' => 'purchased'])
-                    ->update();
+                    ->update(['status' => 'purchased']);
     }
 }
