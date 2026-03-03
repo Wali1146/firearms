@@ -58,7 +58,7 @@ class Cart extends BaseController
         }
 
         if ($this->transactionModel->addToCart($userId, $productId, $quantity)) {
-            session()->setFlashdata('success', 'Product added to cart successfully');
+            session()->setFlashdata('success', 'Product added to cart');
         } else {
             session()->setFlashdata('error', 'Failed to add product to cart');
         }

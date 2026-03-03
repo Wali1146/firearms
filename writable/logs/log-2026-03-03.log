@@ -1780,3 +1780,423 @@ DEBUG - 2026-03-03 11:49:46 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-03-03 11:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-03-03 11:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-03-03 11:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:56:11 --> CSRF token verified.
+DEBUG - 2026-03-03 11:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:56:18 --> CSRF token verified.
+DEBUG - 2026-03-03 11:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:56:33 --> CSRF token verified.
+DEBUG - 2026-03-03 11:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:56:50 --> CSRF token verified.
+DEBUG - 2026-03-03 11:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:57:26 --> CSRF token verified.
+DEBUG - 2026-03-03 11:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-03 11:57:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:26', '2026-03-03 11:57:26')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:57:26 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:26', '2026-03-03 11:57:26')' at line 1
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 2 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:57:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:26', '2026-03-03 11:57:26')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 4 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:57:26 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:26', '2026-03-03 11:57:26')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:26\', \'2026-03-03 11:57:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 11:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:57:46 --> CSRF token verified.
+DEBUG - 2026-03-03 11:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-03 11:57:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:46', '2026-03-03 11:57:46')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:57:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:46', '2026-03-03 11:57:46')' at line 1
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 2 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:57:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:46', '2026-03-03 11:57:46')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 4 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:57:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:57:46', '2026-03-03 11:57:46')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:57:46\', \'2026-03-03 11:57:46\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 11:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 11:58:29 --> CSRF token verified.
+DEBUG - 2026-03-03 11:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-03 11:58:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:58:29', '2026-03-03 11:58:29')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:58:29 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:58:29', '2026-03-03 11:58:29')' at line 1
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 2 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:58:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:58:29', '2026-03-03 11:58:29')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 4 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:58:29 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '1', 'cart', '2026-03-03 11:58:29', '2026-03-03 11:58:29')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'1\', \'cart\', \'2026-03-03 11:58:29\', \'2026-03-03 11:58:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '1')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:58:57 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: products/2]
+in APPPATH\Config\Routes.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 11:58:59 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(818): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 11:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 11:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 11:59:29 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\orders\index.php on line 85.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\orders\\index.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('orders/index', [], true)
+ 4 APPPATH\Controllers\Orders.php(37): view('orders/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Orders->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orders))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-03 12:00:21 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('cart/add/2', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-03 12:01:27 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('cart/add/2', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-03 12:10:02 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('cart/add/2', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-03 12:25:21 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('cart/add/2', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-03 12:40:17 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('cart/add/2', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 12:40:52 --> CSRF token verified.
+DEBUG - 2026-03-03 12:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-03-03 12:40:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '6', 'cart', '2026-03-03 12:40:53', '2026-03-03 12:40:53')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '6')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 12:40:53 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '6', 'cart', '2026-03-03 12:40:53', '2026-03-03 12:40:53')' at line 1
+[Method: POST, Route: cart/add/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 2 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '6')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 12:40:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '6', 'cart', '2026-03-03 12:40:53', '2026-03-03 12:40:53')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 4 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '6')
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+CRITICAL - 2026-03-03 12:40:53 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('1', '2', '6', 'cart', '2026-03-03 12:40:53', '2026-03-03 12:40:53')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (\'1\', \'2\', \'6\', \'cart\', \'2026-03-03 12:40:53\', \'2026-03-03 12:40:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaction` (`user_id`, `product_id`, `quantity`, `status`, `created_at`, ) VALUES (:user_id:, :product_id:, :quantity:, :status:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TransactionModel.php(75): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Cart.php(60): App\Models\TransactionModel->addToCart('1', '2', '6')
+10 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Cart->add('2')
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 12:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 12:41:47 --> CSRF token verified.
+DEBUG - 2026-03-03 12:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 12:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 12:44:26 --> CSRF token verified.
+INFO - 2026-03-03 12:46:55 --> CSRF token verified.

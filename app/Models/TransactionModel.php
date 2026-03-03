@@ -9,7 +9,7 @@ class TransactionModel extends Model
     protected $table = 'transaction';
     protected $primaryKey = 'id';
     protected $allowedFields = ['user_id', 'product_id', 'quantity', 'status'];
-    protected $useTimestamps = true;
+    protected $useTimestamps = FALSE;
     protected $createdField = 'created_at';
     protected $updatedField = null;
 

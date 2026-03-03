@@ -35,7 +35,7 @@ $routes->post('/cart/remove/(:num)', 'Cart::remove/$1');
 
 // Checkout
 $routes->get('/checkout', 'Checkout::index');
-$routes->post('/checkout/process', 'Checkout::process');
+$routes->post('/checkout', 'Checkout::process');
 
 // Orders
 $routes->get('/orders', 'Orders::index');
@@ -51,6 +51,3 @@ $routes->post('/admin/create-product', 'Admin::saveProduct');
 $routes->get('/admin/edit-product/(:num)', 'Admin::editProduct/$1');
 $routes->post('/admin/edit-product/(:num)', 'Admin::updateProduct/$1');
 $routes->get('/admin/delete-product/(:num)', 'Admin::deleteProduct/$1');
-$routes->get('/admin/edit-user/(:num)', 'Admin::editUser/$1');
-$routes->post('/admin/update-user/(:num)', 'Admin::updateUser/$1');
-$routes->get('/admin/delete-user/(:num)', 'Admin::deleteUser/$1');
