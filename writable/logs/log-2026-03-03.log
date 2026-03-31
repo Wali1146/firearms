@@ -2200,3 +2200,186 @@ DEBUG - 2026-03-03 12:42:19 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-03-03 12:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2026-03-03 12:44:26 --> CSRF token verified.
 INFO - 2026-03-03 12:46:55 --> CSRF token verified.
+DEBUG - 2026-03-03 13:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 13:04:36 --> CSRF token verified.
+DEBUG - 2026-03-03 13:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:04:40 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 13:06:15 --> CSRF token verified.
+DEBUG - 2026-03-03 13:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:42:31 --> Register method: get
+INFO - 2026-03-03 13:42:55 --> CSRF token verified.
+DEBUG - 2026-03-03 13:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:42:55 --> Register method: post
+DEBUG - 2026-03-03 13:42:55 --> POST data received
+DEBUG - 2026-03-03 13:42:55 --> Register attempt - username: james, email: james@gmail.com
+DEBUG - 2026-03-03 13:42:55 --> Validation failed: {"password":"The password field must be at least 6 characters in length."}
+INFO - 2026-03-03 13:43:23 --> CSRF token verified.
+DEBUG - 2026-03-03 13:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:43:23 --> Register method: post
+DEBUG - 2026-03-03 13:43:23 --> POST data received
+DEBUG - 2026-03-03 13:43:23 --> Register attempt - username: james, email: james@gmail.com
+DEBUG - 2026-03-03 13:43:23 --> Validation passed
+DEBUG - 2026-03-03 13:43:23 --> Attempting insert with data: {"username":"james","email":"james@gmail.com","password":"$2y$10$wX2jB\/ZIR5Hf6KNy.Bmh2.2S9BpHCIrv4fXHnoB4l.HVQpZi9rH\/e","role":"user","created_at":"2026-03-03 13:43:23"}
+DEBUG - 2026-03-03 13:43:23 --> Insert successful, ID: 3
+DEBUG - 2026-03-03 13:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 13:43:57 --> CSRF token verified.
+DEBUG - 2026-03-03 13:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 13:45:06 --> CSRF token verified.
+DEBUG - 2026-03-03 13:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:45:11 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 13:46:29 --> CSRF token verified.
+DEBUG - 2026-03-03 13:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:46:47 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:47:34 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-03-03 13:48:00 --> CSRF token verified.
+DEBUG - 2026-03-03 13:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:48:14 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:49:56 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:50:05 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-03-03 13:52:16 --> [DEPRECATED] Creation of dynamic property CodeIgniter\View\View::$getStatusColor is deprecated in APPPATH\Views\admin\dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\projek\\firearms\\app\\Views\\admin\\dashboard.php')
+ 2 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 4 APPPATH\Controllers\Admin.php(43): view('admin/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
+DEBUG - 2026-03-03 13:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-03-03 13:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

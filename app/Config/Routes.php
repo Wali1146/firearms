@@ -8,8 +8,17 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/test', 'Test::index');
 
-// Default route
-$routes->get('/', 'Home::index');
+// Route for JSON
+$routes->group('api', ['filter' => 'cors'], function($routes) {
+    $routes->resource('products', ['controller' => 'ProductController']);
+});
+$routes->options('api/(:any)', function() {
+    return response()
+    ->setStatusCode(200)
+    ->setHeader('Access-Control-Allow-Origin', '*')
+    ->setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+    ->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+});
 
 // Home
 $routes->get('/services', 'Home::services');

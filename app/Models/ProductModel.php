@@ -50,17 +50,17 @@ class ProductModel extends Model
     public function getProductsWithDetails()
     {
         return $this->select('products.*, category.name as category_name, teams.name as team_name')
-                    ->join('category', 'category.id = products.category_id')
-                    ->join('teams', 'teams.id = products.team_id')
-                    ->findAll();
+            ->join('category', 'category.id = products.category_id')
+            ->join('teams', 'teams.id = products.team_id')
+            ->findAll();
     }
 
     public function getProductWithDetails($id)
     {
         return $this->select('products.*, category.name as category_name, teams.name as team_name')
-                    ->join('category', 'category.id = products.category_id')
-                    ->join('teams', 'teams.id = products.team_id')
-                    ->find($id);
+            ->join('category', 'category.id = products.category_id')
+            ->join('teams', 'teams.id = products.team_id')
+            ->find($id);
     }
 
     public function getByType($type)
