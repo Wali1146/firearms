@@ -11,6 +11,7 @@ $routes->get('/test', 'Test::index');
 // Route for JSON
 $routes->group('api', ['filter' => 'cors'], function($routes) {
     $routes->resource('products', ['controller' => 'ProductController']);
+    $routes->resource('users', ['controller' => 'UserController']);
 });
 $routes->options('api/(:any)', function() {
     return response()
