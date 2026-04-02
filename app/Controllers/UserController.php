@@ -15,6 +15,35 @@ class UserController extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function login()
+    {
+        $data = $this->request->getJSON(true);
+        $email = $data['email'] ?? null;
+        $password = $data['password'] ?? null;
+        $model = new UserModel();
+        $user = $model->where('email', $email)->first();
+
+        if (!$user) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Email tidak ditemukan'
+            ]);
+        }
+
+        if (!password_verify($password, $user['password'])) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Password salah'
+            ]);
+        }
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Login berhasil',
+            'user' => $user
+        ]);
+    }
+
     public function create()
     {
         $model = new UserModel();
@@ -40,19 +69,19 @@ class UserController extends BaseController
 
         if (!$model->update($id, $data)) {
             return $this->response
-            ->setHeader('Access-Control-Allow-Origin', '*')->setJSON([
-                'status' => 'error',
-                'errors' => $model->errors()
-            ]);
+                ->setHeader('Access-Control-Allow-Origin', '*')->setJSON([
+                    'status' => 'error',
+                    'errors' => $model->errors()
+                ]);
         }
 
         return $this->response
-        ->setHeader('Access-Control-Allow-Origin', '*')
-        ->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
-        ->setJSON([
-            'status' => 'success',
-            'message' => 'User berhasil diupdate'
-        ]);
+            ->setHeader('Access-Control-Allow-Origin', '*')
+            ->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
+            ->setJSON([
+                'status' => 'success',
+                'message' => 'User berhasil diupdate'
+            ]);
     }
 
     public function delete($id = null)
@@ -61,18 +90,18 @@ class UserController extends BaseController
 
         if (!$model->delete($id)) {
             return $this->response
-            ->setHeader('Access-Control-Allow-Origin', '*')->setJSON([
-                'status' => 'error',
-                'errors' => $model->errors()
-            ]);
+                ->setHeader('Access-Control-Allow-Origin', '*')->setJSON([
+                    'status' => 'error',
+                    'errors' => $model->errors()
+                ]);
         }
 
         return $this->response
-        ->setHeader('Access-Control-Allow-Origin', '*')
-        ->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
-        ->setJSON([
-            'status' => 'success',
-            'message' => 'User berhasil dihapus'
-        ]);
+            ->setHeader('Access-Control-Allow-Origin', '*')
+            ->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
+            ->setJSON([
+                'status' => 'success',
+                'message' => 'User berhasil dihapus'
+            ]);
     }
 }

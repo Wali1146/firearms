@@ -12,6 +12,7 @@ $routes->get('/test', 'Test::index');
 $routes->group('api', ['filter' => 'cors'], function($routes) {
     $routes->resource('products', ['controller' => 'ProductController']);
     $routes->resource('users', ['controller' => 'UserController']);
+    $routes->post('login', 'UserController::login');
 });
 $routes->options('api/(:any)', function() {
     return response()
