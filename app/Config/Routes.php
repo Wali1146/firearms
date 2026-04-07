@@ -10,10 +10,16 @@ $routes->get('/test', 'Test::index');
 
 // Route for JSON
 $routes->group('api', ['filter' => 'cors'], function($routes) {
+    $routes->get('cart/user/(:num)', 'CartController::showByUser/$1');
+    $routes->get('transaction/history/(:num)', 'CartController::history/$1');
+    $routes->post('cart/checkout/(:num)', 'CartController::checkout/$1');
+    $routes->post('login', 'UserController::login');
     $routes->resource('products', ['controller' => 'ProductController']);
     $routes->resource('users', ['controller' => 'UserController']);
-    $routes->post('login', 'UserController::login');
+    $routes->resource('cart', ['controller' => 'CartController']);
 });
+
+// CORS preflight requests
 $routes->options('api/(:any)', function() {
     return response()
     ->setStatusCode(200)

@@ -1,0 +1,10 @@
+WARNING - 2026-04-06 23:41:34 --> [DEPRECATED] Setting lowercase HTTP method key "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Filters\Filters.php on line 744.
+ 1 SYSTEMPATH\Filters\Filters.php(744): trigger_error('Setting lowercase HTTP method key "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 SYSTEMPATH\Filters\Filters.php(475): CodeIgniter\Filters\Filters->processMethods()
+ 3 SYSTEMPATH\Filters\Filters.php(218): CodeIgniter\Filters\Filters->initialize('api/login')
+ 4 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('api/login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\projek\\firearms\\public\\index.php')
